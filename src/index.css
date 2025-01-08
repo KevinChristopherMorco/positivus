@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Avenir";
+  src: url("./assets/fonts/AvenirLTStd-Roman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./assets/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SpaceGrotesk", "Avenir", sans-serif;
+}
+
+:root {
+  --background-color: #fff;
+  --gray-accent: #f3f3f3;
+  --green-accent: #b9ff66;
+  --dark-accent: #191a23;
+  --dark-accent-hover: #393b4d;
+}
+
+@layer base {
+  html,
+  body {
+    @apply h-screen;
+  }
+
+  #root {
+    @apply flex min-h-full flex-col overflow-x-hidden;
+  }
+}
