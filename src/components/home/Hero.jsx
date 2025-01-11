@@ -37,7 +37,7 @@ const Hero = () => {
           Book a consultation
         </button>
       </div>
-      <div className="md:col-span-2 xl:py-6">
+      <div className="md:col-span-2 md:pt-10 xl:py-6">
         <ul className="flex flex-wrap items-center justify-between gap-y-4 md:justify-center md:gap-x-10 lg:gap-x-24 xl:justify-between xl:gap-x-0">
           <BrandList logo={amazon} alt={"amazon-logo"} />
           <BrandList logo={dribble} alt={"dribble-logo"} />

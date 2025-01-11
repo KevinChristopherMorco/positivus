@@ -81,6 +81,7 @@ const useScreenResponsiveness = () => {
     screenSize,
     isLargeScreen: lg || xl || xxl,
     isSmallScreen: sm || md,
+    md,
   };
 };
 

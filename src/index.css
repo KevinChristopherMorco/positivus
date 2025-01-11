@@ -29,6 +29,7 @@
   --green-accent: #b9ff66;
   --dark-accent: #191a23;
   --dark-accent-hover: #393b4d;
+  --green-accent-hover: #cbff8b;
 }
 
 @layer base {
