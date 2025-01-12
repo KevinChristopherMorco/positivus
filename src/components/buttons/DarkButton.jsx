@@ -1,9 +1,9 @@
 import React from "react";
 
-const Darkbutton = ({ text, dynamicClass }) => {
+const Darkbutton = ({ text, dynamicClass, isFeatured }) => {
   return (
     <button
-      className={`${dynamicClass} rounded-xl bg-[var(--dark-accent)] p-4 text-white transition-colors hover:bg-[var(--dark-accent-hover)]`}
+      className={`${dynamicClass} ${isFeatured ? "bg-[var(--green-accent)] text-[var(--dark-accent)] hover:bg-[var(--green-accent-hover)]" : "bg-[var(--dark-accent)] text-white hover:bg-[var(--dark-accent-hover)]"} rounded-xl p-4 font-bold transition-colors`}
     >
       {text}
     </button>

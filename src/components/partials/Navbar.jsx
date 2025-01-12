@@ -32,7 +32,11 @@ const MobileNavbar = () => {
                 isLink={true}
               />
               <NavbarList list={"Use Cases"} isLink={true} />
-              <NavbarList list={"Pricing"} isLink={true} />
+              <NavbarList
+                list={"Pricing"}
+                linkName={"/pricing"}
+                isLink={true}
+              />
               <NavbarList list={"Blog"} isLink={true} />
               <li>
                 <button className="rounded-xl border border-black p-4 text-[1.2rem] duration-200 hover:bg-[var(--dark-accent)] hover:font-semibold hover:text-white hover:transition-all">
