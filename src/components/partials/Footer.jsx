@@ -6,6 +6,7 @@ import {
   RiLinkedinFill,
   RiTwitterXFill,
 } from "@remixicon/react";
+import getCurrentDate from "../../helpers/getCurrentDate";
 
 const FooterContact = ({ text }) => {
   return <li className="text-gray-300 xl:text-lg">{text}</li>;
@@ -22,6 +23,7 @@ const FooterSocials = ({ icon: Icon }) => {
 };
 
 const Footer = () => {
+  const { currentYear } = getCurrentDate();
   return (
     <footer className="grid justify-items-center gap-y-12 bg-[var(--dark-accent)] py-10 md:grid-cols-[1fr_2fr] md:place-items-center md:gap-y-10 md:px-5 lg:grid-cols-[1fr_1.5fr_1fr] xl:mx-16 xl:my-8 xl:rounded-3xl xl:px-10 2xl:mx-60 2xl:px-24">
       <img
@@ -73,7 +75,7 @@ const Footer = () => {
       <hr className="w-[90%] bg-gray-300 md:col-span-2 md:col-start-1 md:row-start-3 md:w-full lg:col-span-3" />
 
       <div className="flex flex-col text-center text-gray-300 md:col-span-2 md:row-start-5 lg:col-span-3 lg:row-start-4 xl:text-lg">
-        <p>© 2023 Positivus. All Rights Reserved.</p>
+        <p>© {currentYear} Positivus. All Rights Reserved.</p>
         <a href="">Privacy Policy</a>
       </div>
     </footer>

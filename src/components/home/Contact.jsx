@@ -23,6 +23,7 @@ const FormInput = ({ label, id, type, placeholder, isRequired, isTextbox }) => {
             cols="50"
             className="w-full rounded-lg border border-gray-800 p-3"
             placeholder={placeholder}
+            required={isRequired}
           ></textarea>
         </div>
       ) : (
@@ -36,6 +37,7 @@ const FormInput = ({ label, id, type, placeholder, isRequired, isTextbox }) => {
             id={id}
             className="w-full rounded-lg border border-gray-800 p-3"
             placeholder={placeholder}
+            required={isRequired}
           />
         </div>
       )}

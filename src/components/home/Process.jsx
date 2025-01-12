@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionContainer from "../containers/SectionContainer";
 import SectionHeading from "../headings/SectionHeading";
 import plus from "../../assets/images/plus.png";
 
-import { RiArrowDownFill, RiArrowDownLine } from "@remixicon/react";
-
-const ProcessCard = ({ cardNumber, cardTitle, cardDescription, isOpen }) => {
+const ProcessCard = ({ cardNumber, cardTitle, cardDescription }) => {
+  const [isOpen, setIsOpen] = useState();
   return (
     <div
       className={`${isOpen ? "bg-[var(--green-accent)]" : "bg-[var(--gray-accent)]"} flex w-full flex-col gap-5 rounded-[1.5rem] border border-b-8 border-black p-6`}
@@ -16,7 +15,10 @@ const ProcessCard = ({ cardNumber, cardTitle, cardDescription, isOpen }) => {
             <p className="text-2xl md:text-3xl">{cardNumber}</p>
             <p className="md:text-xl">{cardTitle}</p>
           </div>
-          <div className="col-start-3 cursor-pointer place-self-center justify-self-center md:justify-self-end">
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="col-start-3 cursor-pointer place-self-center justify-self-center md:justify-self-end"
+          >
             <img src={plus} alt="" className="h-8 w-8 md:h-10 md:w-10" />
           </div>
         </div>
@@ -54,17 +56,38 @@ const Process = () => {
         <ProcessCard
           cardNumber={"02"}
           cardTitle={"Research and Strategy Development"}
+          cardDescription={
+            "In this phase, we conduct in-depth research to understand your industry, competitors, and customer behaviors. Based on these insights, we develop a comprehensive, data-driven strategy that aligns with your business goals and positions your brand for success."
+          }
         />
-        <ProcessCard cardNumber={"03"} cardTitle={"Implementation"} />
+        <ProcessCard
+          cardNumber={"03"}
+          cardTitle={"Implementation"}
+          cardDescription={
+            "Once the strategy is in place, we move forward with the execution phase, implementing the tactics and campaigns designed to achieve your business objectives. Our team ensures a seamless rollout of all initiatives, utilizing the most effective channels and tools for optimal impact."
+          }
+        />
         <ProcessCard
           cardNumber={"04"}
           cardTitle={"Monitoring and Optimization"}
+          cardDescription={
+            "After implementation, we continuously monitor the performance of all campaigns. By analyzing key metrics, we identify opportunities for improvement and make real-time adjustments to ensure that your efforts are achieving the desired results."
+          }
         />
         <ProcessCard
           cardNumber={"05"}
           cardTitle={"Reporting and Communication"}
+          cardDescription={
+            "We believe in transparency and clear communication. Throughout the process, we provide regular reports and updates on the progress of your campaigns, ensuring you stay informed and confident in the impact of our efforts."
+          }
         />
-        <ProcessCard cardNumber={"06"} cardTitle={"Continual Improvement"} />
+        <ProcessCard
+          cardNumber={"06"}
+          cardTitle={"Continual Improvement"}
+          cardDescription={
+            "Success is an ongoing process. We focus on continual improvement by refining strategies, exploring new opportunities, and adapting to changes in the market. This allows us to consistently drive growth and deliver long-term value for your business."
+          }
+        />
       </div>
     </SectionContainer>
   );
