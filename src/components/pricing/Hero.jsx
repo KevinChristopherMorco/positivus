@@ -10,7 +10,14 @@ const PricingCard = ({ list, planName, planPrice, isFeatured }) => {
       className={`${isFeatured ? "bg-[var(--dark-accent)] text-white" : ""} flex w-full flex-col gap-5 rounded-[1.5rem] border border-b-4 border-black p-6 md:col-span-2 md:last:col-start-2 md:last:justify-self-center xl:col-span-1 xl:last:col-start-3 xl:last:justify-self-start`}
     >
       <div className="grid place-items-start justify-items-start gap-y-5">
-        <h4 className="text-xl font-bold">{planName}</h4>
+        <div className="flex w-full items-center justify-between">
+          <h4 className="text-xl font-bold">{planName}</h4>
+          {isFeatured && (
+            <div className="rounded-full bg-[var(--green-accent)] px-4 py-1 text-[var(--dark-accent)]">
+              <p className="text-sm font-bold">Popular</p>
+            </div>
+          )}
+        </div>
         <p className="text-4xl font-bold">
           {planPrice} <span className="text-sm font-light">/month</span>
         </p>

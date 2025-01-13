@@ -12,6 +12,7 @@ import socmed from "../../assets/images/service/socmed.png";
 import { RiArrowRightUpLongLine } from "@remixicon/react";
 import Darkbutton from "../buttons/Darkbutton";
 import useScreenResponsiveness from "../../hooks/useScreenResponsiveness";
+import ServiceInformation from "../ServiceInformation";
 
 const ServiceCard = ({
   dynamicClass,
@@ -57,54 +58,58 @@ const Services = () => {
           businesses grow and succeed online. These services include:{" "}
         </p>
       </div>
-      <div className="grid w-full justify-items-center gap-y-10 md:grid-cols-2 md:gap-10">
-        <ServiceCard
-          title={"Search engine optimization"}
-          img={seo}
-          cardColor={"bg-[#F3F3F3]"}
-          arrowBG={"bg-[var(--dark-accent)]"}
-          arrowColor={"text-[var(--green-accent)]"}
-          dynamicClass={"group-hover:bg-[var(--dark-accent-hover)]"}
-        />
-        <ServiceCard
-          title={"Pay-per-click advertising"}
-          img={payperclick}
-          cardColor={"bg-[var(--green-accent)]"}
-          arrowBG={"bg-[var(--dark-accent)]"}
-          arrowColor={"text-[var(--green-accent)]"}
-          dynamicClass={"group-hover:bg-[var(--dark-accent-hover)]"}
-        />
-        <ServiceCard
-          title={"Social Media Marketing"}
-          img={socmed}
-          cardColor={"bg-[var(--dark-accent)]"}
-          arrowBG={"bg-white"}
-          arrowColor={"text-[var(--dark-accent)]"}
-          isDark={true}
-        />
-        <ServiceCard
-          title={"Email Marketing"}
-          img={email}
-          cardColor={"bg-[#F3F3F3]"}
-          arrowBG={"bg-[var(--dark-accent)]"}
-          arrowColor={"text-[var(--green-accent)]"}
-          dynamicClass={"group-hover:bg-[var(--dark-accent-hover)]"}
-        />
-        <ServiceCard
-          title={"Content Creation"}
-          img={content}
-          cardColor={"bg-[var(--green-accent)]"}
-          arrowBG={"bg-[var(--dark-accent)]"}
-          arrowColor={"text-[var(--green-accent)]"}
-          dynamicClass={"group-hover:bg-[var(--dark-accent-hover)]"}
-        />
-        <ServiceCard
-          title={"Analytics and Tracking"}
-          img={analytics}
-          cardColor={"bg-[var(--dark-accent)]"}
-          arrowBG={"bg-white"}
-          arrowColor={"text-[var(--dark-accent)]"}
-          isDark={true}
+      <div className="grid w-full justify-items-center gap-y-10 md:grid-cols-1 md:gap-10">
+        <ServiceInformation
+          serviceData={[
+            {
+              title: "Search engine optimization",
+              img: seo,
+              cardColor: "bg-[#F3F3F3]",
+              arrowBG: "bg-[var(--dark-accent)]",
+              arrowColor: "text-[var(--green-accent)]",
+              dynamicClass: "group-hover:bg-[var(--dark-accent-hover)]",
+            },
+            {
+              title: "Pay-per-click advertising",
+              img: payperclick,
+              cardColor: "bg-[var(--green-accent)]",
+              arrowBG: "bg-[var(--dark-accent)]",
+              arrowColor: "text-[var(--green-accent)]",
+              dynamicClass: "group-hover:bg-[var(--dark-accent-hover)]",
+            },
+            {
+              title: "Social Media Marketing",
+              img: socmed,
+              cardColor: "bg-[var(--dark-accent)]",
+              arrowBG: "bg-white",
+              arrowColor: "text-[var(--dark-accent)]",
+              isDark: true,
+            },
+            {
+              title: "Email Marketing",
+              img: email,
+              cardColor: "bg-[#F3F3F3]",
+              arrowBG: "bg-[var(--dark-accent)]",
+              arrowColor: "text-[var(--green-accent)]",
+              dynamicClass: "group-hover:bg-[var(--dark-accent-hover)]",
+            },
+            {
+              title: "Content Creation",
+              img: content,
+              cardColor: "bg-[var(--green-accent)]",
+              arrowBG: "bg-[var(--dark-accent)]",
+              arrowColor: "text-[var(--green-accent)]",
+              dynamicClass: "group-hover:bg-[var(--dark-accent-hover)]",
+            },
+            {
+              title: "Analytics and Tracking",
+              img: analytics,
+              cardColor: "bg-[var(--dark-accent)]",
+              arrowBG: "bg-white",
+              arrowColor: "text-[var(--dark-accent)]",
+              isDark: true,
+            },
+          ]}
         />
       </div>
       <div className="grid w-full gap-y-5 rounded-[1.5rem] bg-[#F3F3F3] p-10">

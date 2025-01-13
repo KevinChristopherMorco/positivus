@@ -5,7 +5,7 @@ import useScreenResponsiveness from "../../hooks/useScreenResponsiveness";
 import NavbarList from "./NavbarList";
 import { Link } from "react-router-dom";
 
-const MobileNavbar = () => {
+const Navbar = () => {
   const { isSmallScreen, isLargeScreen } = useScreenResponsiveness();
   return (
     <>
@@ -31,7 +31,16 @@ const MobileNavbar = () => {
                 linkName={"/about-us"}
                 isLink={true}
               />
-              <NavbarList list={"Use Cases"} isLink={true} />
+              <NavbarList
+                list={"Services"}
+                linkName={"/services"}
+                isLink={true}
+              />
+              <NavbarList
+                list={"Use Cases"}
+                linkName={"/use-case"}
+                isLink={true}
+              />
               <NavbarList
                 list={"Pricing"}
                 linkName={"/pricing"}
@@ -51,4 +60,4 @@ const MobileNavbar = () => {
   );
 };
 
-export default MobileNavbar;
+export default Navbar;
