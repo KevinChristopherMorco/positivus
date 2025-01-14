@@ -10,6 +10,8 @@ import email from "../../assets/images/service/email-marketing.png";
 import payperclick from "../../assets/images/service/payperclick.png";
 import socmed from "../../assets/images/service/socmed.png";
 
+import trending from "../../assets/images/about/socmed-trending.png";
+
 const OtherServices = () => {
   return (
     <SectionContainer>
@@ -88,7 +90,7 @@ const OtherServices = () => {
         </div>
 
         <img
-          src={seo}
+          src={trending}
           alt=""
           className="md:col-start-2 md:row-start-2 md:h-[300px] lg:row-start-1 xl:justify-self-center"
         />

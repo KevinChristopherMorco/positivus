@@ -1,13 +1,23 @@
 import React from "react";
 import SectionContainer from "../containers/SectionContainer";
 import SectionHeading from "../headings/SectionHeading";
+import { RiGeminiFill } from "@remixicon/react";
+
+import star from "../../assets/images/service/gemini-fill.png";
 
 const ProcessCard = ({ number, title, description }) => {
   return (
     <div className="grid grid-cols-[1fr_4fr] rounded-[1.5rem] bg-[var(--gray-accent)] px-5 py-8 md:grid-cols-[1fr_5fr] md:gap-x-8">
+      {/* <div className="bg-[url('assets/images/service/gemini-fill.png')] bg-contain bg-no-repeat">
+        <p className="text-3xl text-[var(--green-accent)] md:place-self-center md:text-6xl">
+          {number}
+        </p>
+      </div> */}
+
       <p className="text-3xl text-[var(--green-accent)] md:place-self-center md:text-6xl">
         {number}
       </p>
+
       <div className="flex flex-col gap-4">
         <p className="text-2xl font-semibold">{title}</p>
         <p>{description}</p>

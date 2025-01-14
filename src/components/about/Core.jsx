@@ -2,7 +2,11 @@ import React from "react";
 import SectionContainer from "../containers/SectionContainer";
 import SectionHeading from "../headings/SectionHeading";
 
-const CoreCards = ({ title, description, dynamicClass, hasImage }) => {
+import innovation from "../../assets/images/about/innovation.png";
+import collaboration from "../../assets/images/about/collaboration.png";
+import success from "../../assets/images/about/success.png";
+
+const CoreCards = ({ title, description, dynamicClass, img, hasImage }) => {
   return (
     <div
       className={`${hasImage ? "md:grid-cols-2" : ""} ${dynamicClass} grid w-full gap-10 rounded-[1.5rem] border border-b-8 border-black p-8 md:gap-6`}
@@ -13,12 +17,8 @@ const CoreCards = ({ title, description, dynamicClass, hasImage }) => {
         <p className="2xl:text-lg">{description}</p>
       </div>
       {hasImage && (
-        <div className="md:col-start-2">
-          <img
-            src="https://placehold.co/600x400"
-            alt=""
-            className="h-full w-full"
-          />
+        <div className="h-[180px] w-[188px] justify-self-center md:col-start-2 lg:h-[250px] lg:w-[250px]">
+          <img src={img} alt={title} className="h-full w-full" />
         </div>
       )}
     </div>
@@ -45,6 +45,7 @@ const Core = () => {
           title={"Innovation"}
           description={"We constantly strive to stay ahead of industry trends."}
           dynamicClass={"lg:col-start-2 lg:row-start-1"}
+          img={innovation}
           hasImage={true}
         />
         <CoreCards
@@ -57,6 +58,7 @@ const Core = () => {
         <CoreCards
           title={"Collaboration"}
           description={"We believe in the power of teamwork and partnership"}
+          img={collaboration}
           hasImage={true}
         />
       </div>
@@ -71,9 +73,9 @@ const Core = () => {
           </p>
         </div>
         <img
-          src="https://placehold.co/600x400"
+          src={success}
           alt=""
-          className="col-start-2 row-start-2 md:col-start-1 md:row-span-2 md:row-start-1"
+          className="col-start-1 row-start-2 md:col-start-1 md:row-span-2 md:row-start-1"
         />
       </div>
     </SectionContainer>

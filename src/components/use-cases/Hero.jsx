@@ -3,6 +3,8 @@ import SectionContainer from "../containers/SectionContainer";
 import useScreenResponsiveness from "../../hooks/useScreenResponsiveness";
 import { RiArrowUpLine } from "@remixicon/react";
 
+import success from "../../assets/images/usecase/success-story.png";
+
 const StatCard = ({ stat, description }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-2 rounded-[1.5rem] bg-white p-6 text-center text-[var(--dark-accent)]">
@@ -23,10 +25,11 @@ const Hero = () => {
           Proven Success Stories
         </h4>
         <img
+          src={success}
           alt=""
           className="row-span-2 md:h-[400px] md:justify-self-center xl:h-[450px] xl:w-[500px] 2xl:h-[550px] 2xl:w-[600px]"
         />
-        <p className="font-medium lg:text-lg xl:text-xl 2xl:w-[90%] 2xl:text-xl 2xl:leading-[1.6]">
+        <p className="font-medium lg:text-lg xl:text-xl 2xl:w-[90%] 2xl:text-2xl 2xl:leading-[1.6]">
           See how our innovative digital marketing strategies have transformed
           businesses. Whether through SEO, PPC, social media, or web design,
           these use cases highlight the tangible impact of our work. Explore the

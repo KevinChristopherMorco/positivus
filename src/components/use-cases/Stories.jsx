@@ -3,6 +3,7 @@ import SectionContainer from "../containers/SectionContainer";
 import SectionHeading from "../headings/SectionHeading";
 import { RiArrowUpLine } from "@remixicon/react";
 import Darkbutton from "../buttons/Darkbutton";
+import trending from "../../assets/images/usecase/socmed-trending.png";
 
 const StoryCard = ({ title, description }) => {
   return (
@@ -79,9 +80,9 @@ const Stories = () => {
           <Darkbutton text={"Get your free proposal"} />
         </div>
         <img
-          src="https://placehold.co/200x200"
+          src={trending}
           alt=""
-          className="lg:justify-self-center"
+          className="lg:justify-self-center xl:w-[55%]"
         />
       </div>
     </SectionContainer>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionContainer from "../containers/SectionContainer";
 import SectionHeading from "../headings/SectionHeading";
 import plus from "../../assets/images/plus.png";
+import minus from "../../assets/images/minus.png";
 
 const ProcessCard = ({ cardNumber, cardTitle, cardDescription }) => {
   const [isOpen, setIsOpen] = useState();
@@ -19,7 +20,11 @@ const ProcessCard = ({ cardNumber, cardTitle, cardDescription }) => {
             onClick={() => setIsOpen(!isOpen)}
             className="col-start-3 cursor-pointer place-self-center justify-self-center md:justify-self-end"
           >
-            <img src={plus} alt="" className="h-8 w-8 md:h-10 md:w-10" />
+            <img
+              src={isOpen ? minus : plus}
+              alt=""
+              className="h-8 w-8 md:h-10 md:w-10"
+            />
           </div>
         </div>
       </div>

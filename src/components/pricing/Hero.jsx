@@ -1,6 +1,6 @@
 import React from "react";
 import SectionContainer from "../containers/SectionContainer";
-import Darkbutton from "../buttons/DarkButton";
+import Darkbutton from "../../components/buttons/DarkButton";
 import DarkOutlineButton from "../buttons/DarkOutlineButton";
 import { RiCheckLine } from "@remixicon/react";
 
@@ -34,12 +34,14 @@ const PricingCard = ({ list, planName, planPrice, isFeatured }) => {
           isFeatured={isFeatured}
         />
       </div>
-      <hr className="w-full border border-black" />
+      <hr
+        className={`${isFeatured ? "border-white" : "border-black"} w-full border`}
+      />
       <ul className="flex flex-col gap-3 pr-10">
         {list.map((list, index) => {
           return (
             <li key={index} className="grid grid-cols-[1fr_6fr] items-center">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--green-accent)]">
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--green-accent)] text-[var(--dark-accent)]">
                 <RiCheckLine className="h-4 w-4" />
               </div>
               <p className="text-sm font-medium">{list}</p>
@@ -56,7 +58,7 @@ const Hero = () => {
     <SectionContainer>
       <div className="flex flex-col gap-10">
         <p className="text-4xl font-bold">Pricing</p>
-        <p>
+        <p className="lg:text-lg xl:text-xl 2xl:text-2xl">
           Elevate Your Online Presence: Competitive Pricing for Exceptional
           Results
         </p>

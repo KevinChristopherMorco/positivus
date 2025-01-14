@@ -13,6 +13,7 @@ import hubspot from "../../assets/images/brands/hubspot.png";
 import netflix from "../../assets/images/brands/netflix.png";
 import notion from "../../assets/images/brands/notion.png";
 import zoom from "../../assets/images/brands/zoom.png";
+import { Link } from "react-router-dom";
 
 const BrandList = ({ logo, alt }) => {
   return (
@@ -38,11 +39,12 @@ const Hero = () => {
         through a range of services including SEO, PPC, social media marketing,
         and content creation.
       </p>
-      <div>
-        <button className="w-full rounded-xl bg-[var(--dark-accent)] p-4 font-light text-white transition-colors hover:bg-[var(--dark-accent-hover)] xl:w-[50%] xl:text-lg">
-          Book a consultation
-        </button>
-      </div>
+      <Link
+        to={"/consultation"}
+        className="flex w-full items-center justify-center rounded-xl bg-[var(--dark-accent)] p-4 font-light text-white transition-colors hover:bg-[var(--dark-accent-hover)] md:p-0 xl:w-[50%] xl:text-lg"
+      >
+        Book a consultation
+      </Link>
       <div className="w-full overflow-hidden md:col-span-2 md:pt-10 xl:py-6">
         <div className="w-full">
           <Swiper

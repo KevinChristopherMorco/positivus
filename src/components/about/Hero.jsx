@@ -12,7 +12,7 @@ const Hero = () => {
         alt=""
         className="row-span-2 md:h-[400px] md:justify-self-center xl:h-[450px] xl:w-[500px] 2xl:h-[550px] 2xl:w-[600px]"
       />
-      <p className="font-medium lg:text-lg xl:text-xl 2xl:w-[90%] 2xl:text-xl 2xl:leading-[1.6]">
+      <p className="font-medium lg:text-lg xl:text-xl 2xl:w-[90%] 2xl:text-2xl 2xl:leading-[1.6]">
         Our digital marketing agency helps businesses grow and succeed online
         through a range of services including SEO, PPC, social media marketing,
         and content creation.

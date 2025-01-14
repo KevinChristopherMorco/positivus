@@ -112,17 +112,6 @@ const Services = () => {
           ]}
         />
       </div>
-      <div className="grid w-full gap-y-5 rounded-[1.5rem] bg-[#F3F3F3] p-10">
-        <h4 className="text-2xl font-semibold">Let's make things happen!</h4>
-        <p>
-          Contact us today to learn more about how our digital marketing
-          services can help your business grow and succeed online.
-        </p>
-        <Darkbutton
-          dynamicClass={"w-full md:w-[40%]"}
-          text={"Get your free proposal"}
-        />
-      </div>
     </SectionContainer>
   );
 };
